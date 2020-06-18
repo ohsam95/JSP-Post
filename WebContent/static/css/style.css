@@ -4,7 +4,7 @@ header {
 		justify-content: center;
 		background-color: #e1dddb;
 }
-nav {
+nav {	
 		display:  grid;
 		grid-template-columns: auto auto;
 		grid-gap : 10px;

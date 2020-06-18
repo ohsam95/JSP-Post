@@ -13,10 +13,7 @@
 <h1>게시글 상세 페이지</h1>
 </header>
 <hr/>
-<nav>
-		<a href="/apple/member?cmd=loginform">로그인</a>
-		<a href="/apple/member?cmd=joinform">회원가입</a>
-</nav>
+<%@include file= "/include/nav.jsp"  %>
 <section>
 		<table border="1">
 		<tr>

@@ -8,14 +8,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.cos.apple.action.Action;
+import com.cos.apple.action.member.MemberJoinFormAction;
+import com.cos.apple.action.member.MemberJoinProcAction;
+import com.cos.apple.action.member.MemberLoginFormAction;
+import com.cos.apple.action.member.MemberLoginProcAction;
 import com.cos.apple.action.post.PostListAction;
 
 //http://localhost:8001/apple/member
-@WebServlet("/post")
-public class PostController extends HttpServlet {
+@WebServlet("/member")
+public class MemberController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public PostController() {
+    public MemberController() {
         super();
     }
 
@@ -38,8 +42,14 @@ public class PostController extends HttpServlet {
 		
 	}
 	private Action router(String cmd) {
-		if (cmd.equals("list")) {
-			return new PostListAction();
+		if (cmd.equals("joinForm")) {
+			return new MemberJoinFormAction();
+		}else if (cmd.equals("joinProc")) {
+			return new MemberJoinProcAction();
+		}else if (cmd.equals("loginForm")) {
+			return new MemberLoginFormAction();
+		}else if (cmd.equals("loginProc")) {
+			return new MemberLoginProcAction();
 		}
 		return null;
 		
