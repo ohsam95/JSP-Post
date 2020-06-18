@@ -5,12 +5,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>게시글 목록 페이지</title>
+<title>게시글 작성 페이지</title>
 <link rel = "stylesheet" href="/apple/static/css/style.css">
 </head>
 <body>
 <header>
-<h1>게시글 목록 페이지</h1>
+<h1>게시글 작성 페이지</h1>
 </header>
 <hr/>
 <nav>
@@ -18,20 +18,19 @@
 		<a href="/apple/member?cmd=joinform">회원가입</a>
 </nav>
 <section>
+<form action="/apple/post?cmd=saveProc" method="post">
 	<table border="1">
 		<tr>
-			<th>번호</th>
 			<th>제목</th>
-			<th>작성일</th>
-		</tr>
-		<tr>
-			<th>1</th>
-			<th><a href="/apple/post?cmd=detail&id=1">방가</a></th>
-			<th>오늘이욤</th>
+			<th><input type="text" name="title"/></th>
+			</tr>
+			<tr>
+			<th>내용</th>
+			<th><textarea  rows="3"  cols ="22" name="content"></textarea></th>
 		</tr>
 	</table>
-	<a href="/apple/post?cmd=saveForm">글쓰기</a>
-
+	<button>글쓰기 완료</button>
+</form>
 </section>
 <footer>
 <p>Created By Apple.</p>

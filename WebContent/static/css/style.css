@@ -1,0 +1,22 @@
+@charset "UTF-8";
+header {
+		display: grid;
+		justify-content: center;
+		background-color: #e1dddb;
+}
+nav {
+		display:  grid;
+		grid-template-columns: auto auto;
+		grid-gap : 10px;
+		justify-content: center;
+}
+section {
+		display: grid;
+		justify-content: center;
+		margin: 20px;
+}
+footer {
+	display: grid;
+	justify-content: center;
+	background-color: #e1dddb;
+}
