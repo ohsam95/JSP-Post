@@ -8,9 +8,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.cos.apple.action.Action;
+import com.cos.apple.action.post.PostDetailAction;
 import com.cos.apple.action.post.PostListAction;
 import com.cos.apple.action.post.PostSaveFormAction;
 import com.cos.apple.action.post.PostSaveProcAction;
+import com.cos.apple.action.post.PostUpdateFormAction;
+import com.cos.apple.action.post.PostUpdateProcAction;
 
 //http://localhost:8001/apple/member
 @WebServlet("/post")
@@ -46,6 +49,12 @@ public class PostController extends HttpServlet {
 			return new PostSaveFormAction();
 		}else if (cmd.equals("saveProc")) {
 			return new PostSaveProcAction();
+		}else if (cmd.equals("detail")) {
+			return new PostDetailAction();
+		}else if (cmd.equals("updateForm")) {
+			return new PostUpdateFormAction();
+		}else if (cmd.equals("updateProc")) {
+			return new PostUpdateProcAction();
 		}
 		return null;
 		

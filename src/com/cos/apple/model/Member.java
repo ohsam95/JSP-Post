@@ -1,9 +1,14 @@
 package com.cos.apple.model;
 
 import java.sql.Timestamp;
+
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Member {
 	private int id;
 	private String username;

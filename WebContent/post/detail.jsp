@@ -25,12 +25,25 @@
 			<th>삭제</th>
 		</tr>
 		<tr>
-			<th>1</th>
-			<th>ssar</th>
-			<th>방가</th>
-			<th>오늘이욤</th>
-			<th> <a href="/apple/post?cmd=updateForm&id=1"></a>수정</a></th>
-			<th><a href="/apple/post?cmd=deleteProc&id=1"></a>삭제</a></th>
+			<th>${detailDto.postDto.id}</th>
+			<th>${detailDto.username}</th>
+			<th>${detailDto.postDto.title}</th>
+			<th>${detailDto.postDto.content}</th>
+<%-- 		<c:choose> --%>
+<%-- 			<c:when test="${sessionScope.principal.id != Member.username}"> --%>
+			<th> <a href="/apple/post?cmd=updateForm&id=1">수정</a></th>
+			<th><a href="/apple/post?cmd=deleteProc&id=1">삭제</a></th>		
+<%-- 			</c:when>	 --%>
+<%-- 			<c:otherwise> --%>
+<!-- 			<th>권한X</th> -->
+<!-- 			<th>권한X</th> -->
+<%-- 			</c:otherwise> --%>
+<%-- 			</c:choose> --%>
+
+
+			
+<!-- 			<th> <a href="/apple/post?cmd=updateForm&id=1">수정</a></th> -->
+<!-- 			<th><a href="/apple/post?cmd=deleteProc&id=1">삭제</a></th> -->
 		</tr>
 	</table>
 </section>
