@@ -16,6 +16,7 @@
 <%@include file= "/include/nav.jsp"  %>
 <section>
 <form action="/apple/post?cmd=saveProc" method="post">
+	<input type="hidden" value="${sessionScope.principal.id}" name="memberId">
 	<table border="1">
 		<tr>
 			<th>제목</th>
