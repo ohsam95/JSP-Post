@@ -15,19 +15,20 @@
 <hr/>
 <%@include file= "/include/nav.jsp"  %>
 <section>
-<form action="/apple/post?cmd=saveProc" method="post">
+<form action="/apple/member?cmd=updateProc" method="post">
+		<input type="hidden" value="${sessionScope.principal.id }" name="id" />
 	<table border="1">
 		<tr>
 			<th>유저네임</th>
-			<th><input value="유저네임 넣기" type="text" name="username"/></th>
+			<th><input value="${sessionScope.principal.username} " type="text" name="username"/></th>
 			</tr>
 			<tr>
 			<th>패스워드</th>
-			<th><input type="password" name = "password"/></th>
+			<th><input type="비번은 알 수 없지롱~" name = "password" required/></th>
 		</tr>
 		<tr>
 		<th>이메일</th>
-		<th><input value="이메일 넣기" type="email" name = "email"/></th>
+		<th><input value="${sessionScope.principal.email}" type="email" name = "email"/></th>
 		</tr>
 	</table>
 	<button>회원정보 수정 완료</button>

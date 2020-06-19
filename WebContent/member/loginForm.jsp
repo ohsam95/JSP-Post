@@ -15,7 +15,7 @@
 <hr/>
 <%@include file= "/include/nav.jsp"  %>
 <section>
-<form action="/apple/post?cmd=list" method="post">
+<form action="/apple/member?cmd=loginProc" method="post">
 	<table border="1">
 		<tr>
 			<th>유저네임</th>
