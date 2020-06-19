@@ -21,11 +21,14 @@
 			<th>제목</th>
 			<th>작성일</th>
 		</tr>
+		<c:forEach var="post" items="${posts}">
 		<tr>
-			<th>1</th>
-			<th><a href="/apple/post?cmd=detail&id=1">방가</a></th>
-			<th>오늘이욤</th>
+			<th>${post.id}</th>
+			<th><a href="/apple/post?cmd=detail&id=${post.id}">${post.title}</a></th>
+			<th>${post.createDate}</th>
 		</tr>
+		</c:forEach>
+		
 	</table>
 	<a href="/apple/post?cmd=saveForm">글쓰기</a>
 
